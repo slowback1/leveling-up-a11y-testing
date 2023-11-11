@@ -3,6 +3,11 @@ export default class PageDsl  {
         cy.visit("http://localhost:5173/");
     }
 
+    clickTheThingThatHasTheButtonRole() {
+        cy.findByRole("button")
+            .click();
+    }
+
     clickButton() {
         cy.get("[data-cy='incrementer']")
             .click();
@@ -41,5 +46,10 @@ export default class PageDsl  {
     verifyInputIsFocused() {
         cy.get("[data-cy='input']")
             .should("have.focus")
+    }
+
+    typeIntoInputWithTheRightRole() {
+        cy.findByRole("textbox")
+            .type("value");
     }
 }

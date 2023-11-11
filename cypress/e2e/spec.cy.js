@@ -41,4 +41,15 @@ describe('a11y examples', () => {
 
     pageObject.verifyInputIsFocused();
   })
+
+  it("can click the button with the right aria role", () => {
+    pageObject.clickTheThingThatHasTheButtonRole();
+    pageObject.validateCount("1");
+  })
+
+  it("can type into the input with the right role", () => {
+    pageObject.typeIntoInputWithTheRightRole();
+
+    pageObject.verifyTextContent("good");
+  })
 })

@@ -36,3 +36,19 @@
 .incrementer:focus, .incrementer:hover {
   background-color: #494df6;
 }
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start;
+}
+
+.form-group p {
+  margin: 0;
+}
+
+.text-box {
+  border: 1px solid black;
+  padding: 2px 4px;
+  min-width: 200px;
+}

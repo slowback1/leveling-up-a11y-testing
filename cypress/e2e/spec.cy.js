@@ -23,4 +23,22 @@ describe('a11y examples', () => {
 
     pageObject.validateCount("2");
   })
+
+  it("can click the button with the keyboard", () => {
+    pageObject.keyboardButton();
+
+    pageObject.validateCount("1")
+  });
+
+  it("can type into the input field", () => {
+    pageObject.typeIntoInput();
+
+    pageObject.verifyTextContent();
+  })
+
+  it("clicking into the label should focus the input", () => {
+    pageObject.clickLabel();
+
+    pageObject.verifyInputIsFocused();
+  })
 })
